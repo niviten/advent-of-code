@@ -1,4 +1,5 @@
 import * as fs from 'fs'
+import path from 'path'
 
 function first(input: string): number {
   let floor: number = 0
@@ -36,18 +37,20 @@ function second(input: string): number {
 }
 
 function firstWrapper() {
-  const filePath: string = './input.txt'
+  const filePath: string = path.join(__dirname, 'input.txt')
   const input: string = fs.readFileSync(filePath, 'utf-8')
   const output: number = first(input)
   console.log('first output', output)
 }
 
 function secondWrapper() {
-  const filePath: string = './input.txt'
+  const filePath: string = path.join(__dirname, 'input.txt')
   const input: string = fs.readFileSync(filePath, 'utf-8')
   const output: number = second(input)
   console.log('second output', output)
 }
 
-firstWrapper()
-secondWrapper()
+export default function() {
+  firstWrapper()
+  secondWrapper()
+}

@@ -7,14 +7,13 @@
     "copy-files": "copyfiles -u 1 \"src/**/*.txt\" dist",
     "build": "npm run clean && npm run copy-files && tsc",
     "prestart": "npm run build",
-    "start": "node dist",
+    "start": "node dist/index.js",
     "predev": "npm run build",
-    "dev": "concurrently \"tsc --watch\" \"nodemon dist\""
+    "dev": "concurrently \"tsc --watch\" \"nodemon dist/index.js\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "devDependencies": {
     "@types/node": "^20.5.0",
     "concurrently": "^8.2.0",
