@@ -84,6 +84,7 @@ function secondWrapper() {
 }
 
 export default function() {
+  console.log('2015 day 03')
   firstWrapper()
   secondWrapper()
 }

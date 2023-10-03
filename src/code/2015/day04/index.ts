@@ -16,6 +16,7 @@ function fn(input: string, startWithString: string): number {
 }
 
 export default function() {
-  console.log('first', fn('ckczppom', '00000'))
-  console.log('second', fn('ckczppom', '000000'))
+  console.log('2015 day 04')
+  console.log('first', fn('yzbqklnj', '00000'))
+  console.log('second', fn('yzbqklnj', '000000'))
 }
